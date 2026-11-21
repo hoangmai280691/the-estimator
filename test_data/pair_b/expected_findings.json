@@ -1,0 +1,45 @@
+{
+  "pair_id": "pair_b",
+  "expected_findings": [
+    {
+      "id": "B01",
+      "category": "investor_types",
+      "title": "Beneficial owner information added"
+    },
+    {
+      "id": "B02",
+      "category": "conditional_logic",
+      "title": "Additional approval above USD 500,000"
+    },
+    {
+      "id": "B03",
+      "category": "required_optional",
+      "title": "Required US Person Status Yes/No declaration added"
+    },
+    {
+      "id": "B04",
+      "category": "conditional_logic",
+      "title": "Explicit Yes branch for W-9 upload added"
+    },
+    {
+      "id": "B05",
+      "category": "conditional_logic",
+      "title": "Non-US branch for W-8BEN or W-8BEN-E added"
+    },
+    {
+      "id": "B06",
+      "category": "supporting_documents",
+      "title": "Identification for multiple beneficial owners added"
+    },
+    {
+      "id": "B07",
+      "category": "other",
+      "title": "Signing authority declaration added"
+    },
+    {
+      "id": "B08",
+      "category": "signatures",
+      "title": "Multiple required signatories supported"
+    }
+  ]
+}

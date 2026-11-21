@@ -1,0 +1,40 @@
+{
+  "pair_id": "pair_c",
+  "expected_findings": [
+    {
+      "id": "C01",
+      "category": "required_optional",
+      "title": "Phone number no longer required"
+    },
+    {
+      "id": "C02",
+      "category": "required_optional",
+      "title": "TIN no longer required"
+    },
+    {
+      "id": "C03",
+      "category": "conditional_logic",
+      "title": "W-9 condition reversed"
+    },
+    {
+      "id": "C04",
+      "category": "required_optional",
+      "title": "Proof of address changed to optional"
+    },
+    {
+      "id": "C05",
+      "category": "other",
+      "title": "Optional marketing consent added"
+    },
+    {
+      "id": "C06",
+      "category": "validation_rules",
+      "title": "Signature date validation added"
+    },
+    {
+      "id": "C07",
+      "category": "other",
+      "title": "Expected wire transfer date added"
+    }
+  ]
+}

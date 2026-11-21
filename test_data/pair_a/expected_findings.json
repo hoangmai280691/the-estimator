@@ -1,0 +1,117 @@
+{
+  "pair_id": "pair_a",
+  "scenario": "Basic subscription form comparison",
+  "fund_name": "Northbridge Growth Fund I",
+  "reference_version": "v1.0",
+  "incoming_version": "v2.0",
+  "expected_findings": [
+    {
+      "id": "A01",
+      "category": "investor_types",
+      "title": "Legal entity investors added",
+      "reference": "Individual investors only",
+      "incoming": "Individual investors and legal entities",
+      "expected_change": "added_investor_type",
+      "potential_implication": "Additional entity-specific fields and investor workflows"
+    },
+    {
+      "id": "A02",
+      "category": "conditional_logic",
+      "title": "Entity-specific information requirements",
+      "reference": "Individual investor information only",
+      "incoming": "Legal entity investors must provide registered entity name, country of incorporation, registration number, registered business address, and authorized representative details",
+      "expected_change": "new_conditional_requirements",
+      "potential_implication": "Show entity-specific fields when the investor is a legal entity"
+    },
+    {
+      "id": "A03",
+      "category": "required_optional",
+      "title": "TIN changed from required to optional",
+      "reference": "Tax Identification Number (TIN) is required",
+      "incoming": "A Tax Identification Number (TIN) is optional",
+      "expected_change": "requirement_changed",
+      "potential_implication": "Review field requiredness and validation"
+    },
+    {
+      "id": "A04",
+      "category": "supporting_documents",
+      "title": "Proof of residential address added",
+      "reference": "Government-issued identification document",
+      "incoming": "Government-issued identification document and proof of residential address",
+      "expected_change": "new_document_requirement",
+      "potential_implication": "Additional document upload requirement for individuals"
+    },
+    {
+      "id": "A05",
+      "category": "supporting_documents",
+      "title": "Legal entity supporting documents added",
+      "reference": "Government-issued identification document",
+      "incoming": "Certificate of incorporation and identification for the authorized representative",
+      "expected_change": "new_document_requirements",
+      "potential_implication": "Additional entity-specific document collection"
+    },
+    {
+      "id": "A06",
+      "category": "conditional_logic",
+      "title": "US person W-9 requirement added",
+      "reference": "No US person-specific W-9 requirement",
+      "incoming": "If the investor is a US person, the investor must also provide a completed IRS Form W-9",
+      "expected_change": "new_conditional_requirement",
+      "potential_implication": "Confirm how US person status is determined and when W-9 collection is triggered"
+    },
+    {
+      "id": "A07",
+      "category": "signatures",
+      "title": "Electronic signature introduced",
+      "reference": "Handwritten signature",
+      "incoming": "Electronic signature",
+      "expected_change": "signature_method_changed",
+      "potential_implication": "Review electronic signing workflow"
+    },
+    {
+      "id": "A08",
+      "category": "signatures",
+      "title": "Authorized representative signature required",
+      "reference": "Individual investor signs",
+      "incoming": "Authorized representative signs on behalf of the legal entity",
+      "expected_change": "new_signature_role",
+      "potential_implication": "Review signer roles for entity investors"
+    },
+    {
+      "id": "A09",
+      "category": "validation_rules",
+      "title": "Minimum subscription amount increased",
+      "reference": "USD 100,000",
+      "incoming": "USD 150,000",
+      "expected_change": "threshold_changed",
+      "potential_implication": "Update minimum subscription amount validation"
+    },
+    {
+      "id": "A10",
+      "category": "other",
+      "title": "Privacy notice acknowledgment added",
+      "reference": "Accuracy and completeness declaration only",
+      "incoming": "Read and accepted the fund's privacy notice",
+      "expected_change": "new_declaration",
+      "potential_implication": "Review whether a separate acknowledgment field is needed"
+    },
+    {
+      "id": "A11",
+      "category": "other",
+      "title": "Subscription reference number added to payment reference",
+      "reference": "Investor full legal name",
+      "incoming": "Investor full legal name and Subscription Reference Number",
+      "expected_change": "payment_instruction_changed",
+      "potential_implication": "Review whether the subscription reference number needs to be displayed or generated"
+    },
+    {
+      "id": "A12",
+      "category": "other",
+      "title": "Expected wire transfer date added",
+      "reference": "No expected wire transfer date requested",
+      "incoming": "The investor must provide the expected wire transfer date in the subscription form",
+      "expected_change": "new_field",
+      "potential_implication": "Review date input and any requiredness or validation rules"
+    }
+  ]
+}
