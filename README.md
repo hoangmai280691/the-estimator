@@ -89,6 +89,13 @@ Workflow information can be saved and restored to support continued review and e
 - OpenAI API for on-demand explanations
 - JSON-based session persistence
 
+## Run through Streamlit browser:
+
+Run The Estimator directly in your browser via Streamlit Community Cloud (no installation required):
+
+https://the-estimator-gmdwcavqga45hhefv7fa9m.streamlit.app/
+
+
 ## Run Locally
 
 **Requirements**
@@ -118,7 +125,7 @@ Workflow information can be saved and restored to support continued review and e
    streamlit run app.py
    ```
 
-The application opens in a browser. The main comparison and estimation workflow is rule-based; AI explanations are an optional supporting feature.
+The application opens in a browser. The main comparison and estimation workflow is rule-based; AI explanations are an optional supporting feature. 
 
 ## 6. Limitations
 
